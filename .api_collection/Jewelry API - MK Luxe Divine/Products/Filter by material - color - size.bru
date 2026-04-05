@@ -1,0 +1,21 @@
+meta {
+  name: Filter by material / color / size
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{BackendUri}}/api/v1/products/?material=gold&color=rose&size=7
+  body: none
+  auth: inherit
+}
+
+params:query {
+  material: gold
+  color: rose
+  size: 7
+}
+
+settings {
+  encodeUrl: true
+}

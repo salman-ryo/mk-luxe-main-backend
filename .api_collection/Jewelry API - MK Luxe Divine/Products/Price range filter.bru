@@ -1,0 +1,20 @@
+meta {
+  name: Price range filter
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{BackendUri}}/api/v1/products/?min_price=1000&max_price=5000
+  body: none
+  auth: inherit
+}
+
+params:query {
+  min_price: 1000
+  max_price: 5000
+}
+
+settings {
+  encodeUrl: true
+}

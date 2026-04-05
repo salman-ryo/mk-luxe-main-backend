@@ -1,0 +1,205 @@
+{
+  "info": {
+    "name": "Jewelry API - MK Luxe Divine",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_postman_id": "jewelry-api-collection"
+  },
+  "item": [
+    {
+      "name": "Products",
+      "item": [
+        {
+          "name": "List all products (first page)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BackendUri}}/api/v1/products/",
+              "host": ["{{BackendUri}}"],
+              "path": ["api", "v1", "products"]
+            }
+          }
+        },
+        {
+          "name": "List products with pagination",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BackendUri}}/api/v1/products/?page=2&page_size=10",
+              "host": ["{{BackendUri}}"],
+              "path": ["api", "v1", "products"],
+              "query": [
+                { "key": "page", "value": "2" },
+                { "key": "page_size", "value": "10" }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Filter by category (slug)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BackendUri}}/api/v1/products/?category=necklaces",
+              "host": ["{{BackendUri}}"],
+              "path": ["api", "v1", "products"],
+              "query": [{ "key": "category", "value": "necklaces" }]
+            }
+          }
+        },
+        {
+          "name": "Filter by primary category",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BackendUri}}/api/v1/products/?primary_category=earrings",
+              "host": ["{{BackendUri}}"],
+              "path": ["api", "v1", "products"],
+              "query": [{ "key": "primary_category", "value": "earrings" }]
+            }
+          }
+        },
+        {
+          "name": "Price range filter",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BackendUri}}/api/v1/products/?min_price=1000&max_price=5000",
+              "host": ["{{BackendUri}}"],
+              "path": ["api", "v1", "products"],
+              "query": [
+                { "key": "min_price", "value": "1000" },
+                { "key": "max_price", "value": "5000" }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Filter by in stock",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BackendUri}}/api/v1/products/?in_stock=true",
+              "host": ["{{BackendUri}}"],
+              "path": ["api", "v1", "products"],
+              "query": [{ "key": "in_stock", "value": "true" }]
+            }
+          }
+        },
+        {
+          "name": "Filter by product flags",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BackendUri}}/api/v1/products/?featured=true&new_arrival=true&best_seller=false",
+              "host": ["{{BackendUri}}"],
+              "path": ["api", "v1", "products"],
+              "query": [
+                { "key": "featured", "value": "true" },
+                { "key": "new_arrival", "value": "true" },
+                { "key": "best_seller", "value": "false" }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Filter by material / color / size",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BackendUri}}/api/v1/products/?material=gold&color=rose&size=7",
+              "host": ["{{BackendUri}}"],
+              "path": ["api", "v1", "products"],
+              "query": [
+                { "key": "material", "value": "gold" },
+                { "key": "color", "value": "rose" },
+                { "key": "size", "value": "7" }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Search products",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BackendUri}}/api/v1/products/?search=golden+ring",
+              "host": ["{{BackendUri}}"],
+              "path": ["api", "v1", "products"],
+              "query": [{ "key": "search", "value": "golden ring" }]
+            }
+          }
+        },
+        {
+          "name": "Sorting examples",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BackendUri}}/api/v1/products/?sort=price_asc",
+              "host": ["{{BackendUri}}"],
+              "path": ["api", "v1", "products"],
+              "query": [{ "key": "sort", "value": "price_asc" }]
+            }
+          }
+        },
+        {
+          "name": "Retrieve product by slug",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BackendUri}}/api/v1/products/golden-heaven-ring/",
+              "host": ["{{BackendUri}}"],
+              "path": ["api", "v1", "products", "golden-heaven-ring"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Categories",
+      "item": [
+        {
+          "name": "List all categories",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BackendUri}}/api/v1/categories/",
+              "host": ["{{BackendUri}}"],
+              "path": ["api", "v1", "categories"]
+            }
+          }
+        },
+        {
+          "name": "Retrieve category by slug",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BackendUri}}/api/v1/categories/necklaces/",
+              "host": ["{{BackendUri}}"],
+              "path": ["api", "v1", "categories", "necklaces"]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "BackendUri",
+      "value": "http://localhost:8000",
+      "type": "string"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+meta {
+  name: Filter by category (slug)
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{BackendUri}}/api/v1/products/?category=necklaces
+  body: none
+  auth: inherit
+}
+
+params:query {
+  category: necklaces
+}
+
+settings {
+  encodeUrl: true
+}

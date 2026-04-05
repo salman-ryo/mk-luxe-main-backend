@@ -1,0 +1,19 @@
+meta {
+  name: Sorting examples
+  type: http
+  seq: 10
+}
+
+get {
+  url: {{BackendUri}}/api/v1/products/?sort=price_asc
+  body: none
+  auth: inherit
+}
+
+params:query {
+  sort: price_asc
+}
+
+settings {
+  encodeUrl: true
+}

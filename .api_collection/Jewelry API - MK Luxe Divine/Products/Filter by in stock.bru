@@ -1,0 +1,19 @@
+meta {
+  name: Filter by in stock
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{BackendUri}}/api/v1/products/?in_stock=true
+  body: none
+  auth: inherit
+}
+
+params:query {
+  in_stock: true
+}
+
+settings {
+  encodeUrl: true
+}

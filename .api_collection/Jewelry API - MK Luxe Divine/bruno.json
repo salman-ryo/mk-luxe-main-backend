@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Jewelry API - MK Luxe Divine",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

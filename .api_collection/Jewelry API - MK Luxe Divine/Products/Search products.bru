@@ -1,0 +1,19 @@
+meta {
+  name: Search products
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{BackendUri}}/api/v1/products/?search=golden+ring
+  body: none
+  auth: inherit
+}
+
+params:query {
+  search: golden ring
+}
+
+settings {
+  encodeUrl: true
+}

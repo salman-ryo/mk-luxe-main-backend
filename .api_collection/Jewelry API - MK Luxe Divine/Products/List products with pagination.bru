@@ -1,0 +1,20 @@
+meta {
+  name: List products with pagination
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{BackendUri}}/api/v1/products/?page=2&page_size=10
+  body: none
+  auth: inherit
+}
+
+params:query {
+  page: 2
+  page_size: 10
+}
+
+settings {
+  encodeUrl: true
+}

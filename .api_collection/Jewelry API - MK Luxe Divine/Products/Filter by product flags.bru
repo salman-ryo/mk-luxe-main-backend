@@ -1,0 +1,21 @@
+meta {
+  name: Filter by product flags
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{BackendUri}}/api/v1/products/?featured=true&new_arrival=true&best_seller=false
+  body: none
+  auth: inherit
+}
+
+params:query {
+  featured: true
+  new_arrival: true
+  best_seller: false
+}
+
+settings {
+  encodeUrl: true
+}
