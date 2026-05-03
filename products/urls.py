@@ -2,8 +2,10 @@ from django.urls import path
 from .views import CategoryViewSet, ProductViewSet
 
 # Bind viewset methods manually
+
 product_list = ProductViewSet.as_view({
     "get": "list",
+    "post": "create",   # ✅ ADD THIS
 })
 
 product_detail = ProductViewSet.as_view({

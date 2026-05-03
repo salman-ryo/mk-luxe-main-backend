@@ -1,0 +1,154 @@
+meta {
+  name: Add from Json (Img)
+  type: http
+  seq: 11
+}
+
+post {
+  url: {{BackendUri}}/api/v1/products/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+  "product": {
+  "name": "Gold-Tone Floral Stud Earrings",
+  "slug": "gold-tone-floral-stud-earrings",
+  "status": "active",
+  "is_active": true,
+  "is_featured": false,
+  "is_new_arrival": false,
+  "is_best_seller": false,
+  "primary_category": {
+  "name": "earrings",
+  "slug": "earrings"
+  },
+  "categories": [
+  {
+  "name": "stud earrings",
+  "slug": "stud-earrings"
+  },
+  {
+  "name": "party wear",
+  "slug": "party-wear"
+  }
+  ],
+  "short_description": "Gold-tone floral stud earrings with a textured petal design.",
+  "description": "Elegant gold-tone stud earrings featuring a floral design with detailed textured petals and a polished finish. These earrings add a subtle statement to both everyday and occasion wear.",
+  "care_instructions": "Avoid contact with water, perfumes, and chemicals. Store in a dry pouch and wipe gently with a soft cloth after use.",
+  "what_you_get": [
+  "1 pair of earrings"
+  ],
+  "anti_tarnish": null,
+  "water_resistant": null,
+  "sweat_resistant": null,
+  "hypoallergenic": null,
+  "nickel_free": null,
+  "lightweight": null,
+  "material": "metal",
+  "base_metal": "metal alloy",
+  "plating": "gold-tone",
+  "finish": "polished",
+  "gemstone": "",
+  "color_family": "gold",
+  "specifications": {
+  "design_motif": "flower",
+  "style": "stud",
+  "closure_type": "push-back",
+  "surface_texture": "textured petals"
+  },
+  "seo_title": "Gold-Tone Floral Stud Earrings | Elegant Flower Design",
+  "seo_description": "Shop gold-tone floral stud earrings with a textured petal design. Perfect for daily wear, gifting, and special occasions.",
+  "price_from": null,
+  "price_to": null,
+  "currency": "INR",
+  "warranty_months": null,
+  "return_window_days": null,
+  "delivery_note": "",
+  "is_available_online": true,
+  "is_available_at_stall": true,
+  "stall_note": "",
+  "cover_image_url": "/mnt/data/WhatsApp Image 2026-01-15 at 2.47.11 PM.jpeg",
+  "alt_text": "Gold-tone floral stud earrings with textured petals",
+  "weight_grams": null,
+  "length_mm": null,
+  "width_mm": null
+  },
+  "variants": [
+  {
+  "name": "Gold-Tone Floral Stud Earrings",
+  "sku": "GFSE-001",
+  "barcode": "",
+  "material": "metal",
+  "color": "gold",
+  "size": "",
+  "length_mm": null,
+  "width_mm": null,
+  "weight_grams": null,
+  "price": null,
+  "compare_at_price": null,
+  "stock_quantity": 0,
+  "reserved_quantity": 0,
+  "low_stock_threshold": 3,
+  "is_active": true,
+  "is_default": true,
+  "attributes": {
+  "motif": "flower",
+  "finish": "polished",
+  "style": "stud"
+  }
+  }
+  ],
+  "images": [
+  {
+  "image_url": "/mnt/data/WhatsApp Image 2026-01-15 at 2.47.11 PM.jpeg",
+  "alt_text": "Gold-tone floral stud earrings with textured petals",
+  "is_primary": true,
+  "sort_order": 0
+  }
+  ],
+  "faqs": [
+  {
+  "question": "Are these earrings suitable for daily wear?",
+  "answer": "Yes, their lightweight stud design makes them comfortable for regular use.",
+  "sort_order": 0,
+  "is_active": true
+  },
+  {
+  "question": "What type of closure do these earrings have?",
+  "answer": "They typically use a push-back closure, as suggested by the stud design.",
+  "sort_order": 1,
+  "is_active": true
+  },
+  {
+  "question": "Are these earrings anti-tarnish?",
+  "answer": "Anti-tarnish properties are not confirmed from the image.",
+  "sort_order": 2,
+  "is_active": true
+  }
+  ],
+  "summary": {
+  "product_type": "earrings",
+  "style": "stud",
+  "occasion": "party wear",
+  "best_for": [
+  "daily wear",
+  "gifting",
+  "occasion wear"
+  ],
+  "visual_tags": [
+  "gold-tone",
+  "floral",
+  "textured",
+  "minimal",
+  "elegant"
+  ]
+  }
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

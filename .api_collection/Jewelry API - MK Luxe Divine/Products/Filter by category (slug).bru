@@ -5,15 +5,16 @@ meta {
 }
 
 get {
-  url: {{BackendUri}}/api/v1/products/?category=necklaces
+  url: {{BackendUri}}/api/v1/products/?category=rings
   body: none
   auth: inherit
 }
 
 params:query {
-  category: necklaces
+  category: rings
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
