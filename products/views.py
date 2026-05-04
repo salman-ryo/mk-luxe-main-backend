@@ -11,6 +11,8 @@ from rest_framework.pagination import PageNumberPagination
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 
+from core.auth import APIKeyProtectedViewSetMixin
+
 from .models import Category, Product, ProductFAQ, ProductImage, ProductVariant
 from .serializers import CategorySerializer, ProductDetailSerializer, ProductListSerializer
 
@@ -107,13 +109,18 @@ class CategoryViewSet(viewsets.ReadOnlyModelViewSet):
         )
 
 
-class ProductViewSet(viewsets.ModelViewSet):
+class ProductViewSet(APIKeyProtectedViewSetMixin, viewsets.ModelViewSet):
     """
-    GET    /products/           -> list
-    GET    /products/<slug>/    -> retrieve
-    POST   /products/           -> create (nested payload supported)
+    GET    /products/         -> list
+    GET    /products/<slug>/  -> retrieve
+    POST   /products/         -> create (protected by API key)
     """
+
     permission_classes = [AllowAny]
+    protected_actions = {"create"}
+    required_api_key_env = "PRODUCT_ADMIN_API_KEY"
+    api_key_header_name = "X-API-Key"
+
     lookup_field = "slug"
     pagination_class = StandardPageNumberPagination
 

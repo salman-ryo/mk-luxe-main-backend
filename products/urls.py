@@ -5,7 +5,7 @@ from .views import CategoryViewSet, ProductViewSet
 
 product_list = ProductViewSet.as_view({
     "get": "list",
-    "post": "create",   # ✅ ADD THIS
+    "post": "create",
 })
 
 product_detail = ProductViewSet.as_view({

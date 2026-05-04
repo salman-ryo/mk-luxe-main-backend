@@ -27,7 +27,7 @@ ALLOWED_HOSTS = get_list(
 
 # Warn in production
 if not DEBUG:
-    warn_missing("SECRET_KEY", "ALLOWED_HOSTS", "DATABASE_URL")
+    warn_missing("SECRET_KEY", "ALLOWED_HOSTS", "DATABASE_URL","PRODUCT_ADMIN_API_KEY")
 
 # --------------------------------------------------
 # APPLICATIONS
@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     "rest_framework",
     "corsheaders",
 
+    # Custom apps
+    "core",
     "products",
 ]
 
