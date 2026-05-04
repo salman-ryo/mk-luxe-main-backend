@@ -4,7 +4,7 @@ from hmac import compare_digest
 
 from rest_framework.permissions import BasePermission
 
-from helpers.env import get_env
+from helpers import get_env
 
 
 class HasAPIKey(BasePermission):
